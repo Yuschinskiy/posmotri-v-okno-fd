@@ -84,6 +84,8 @@ ol {
   flex-direction: column;
   grid-area: content__details;
   gap: 26px;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .search-form {
@@ -136,7 +138,7 @@ ol {
   border-top: 1px solid rgb(255, 255, 255);
   border-bottom: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-family: inherit, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -167,12 +169,12 @@ ol {
 
 .search-form__fieldset-title {
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   text-align: left;
-  gap: 5px;
+  margin-bottom: 5px;
 }
 
 .search-form__checkbox-list {
@@ -216,7 +218,7 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-color: #fff;
   text-decoration-thickness: 1px;
@@ -319,6 +321,7 @@ ol {
 .more-button {
   min-width: 390px;
   background-color: transparent;
+  width: 100%;
 }
 
 .button:hover {
