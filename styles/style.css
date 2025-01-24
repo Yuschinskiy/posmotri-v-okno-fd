@@ -10,6 +10,8 @@ html {
 
 .page {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -65,12 +67,11 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "result result content__details";
+  grid-template-columns: 711 399px;
+  grid-template-areas: "result content__details";
   align-items: end;
   gap: 30px;
-  width: 1140px;
-  height: 534px;
+  max-width: 1140px;
 }
 
 .result {
@@ -91,19 +92,17 @@ ol {
   column-gap: 1em;
 }
 
-.more-button {
-  background-color: transparent;
-}
-
 .content__list {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 399px;
-  height: 298px;
-  overflow-x: hidden;
+  min-width: 399px;
+  max-height: 298px;
   overflow-y: scroll;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-block-end: 30px;
 }
 
 .content__accent {
@@ -126,7 +125,7 @@ ol {
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 103px;
+  max-height: 103px;
   object-fit: cover;
   object-position: center;
 }
@@ -137,7 +136,7 @@ ol {
   border-top: 1px solid rgb(255, 255, 255);
   border-bottom: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-family: inherit;
+  font-family: inherit, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -163,15 +162,17 @@ ol {
 .search-form__fieldset {
   position: relative;
   border: none;
+  gap: 5px;
 }
 
 .search-form__fieldset-title {
   color: rgb(255, 255, 255);
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
   text-align: left;
+  gap: 5px;
 }
 
 .search-form__checkbox-list {
@@ -192,7 +193,7 @@ ol {
   display: block;
   width: 15px;
   height: 15px;
-  border: 2px solid rgb(27, 25, 25);
+  border: 1px solid rgb(27, 25, 25);
   background-color: #fff;
   inline-size: 100%;
   block-size: 100%;
@@ -215,20 +216,14 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label:hover {
-  text-decoration: underline;
-  text-decoration-color: #fff;
-  text-decoration-thickness: 1px;
-}
-
-.search-form__label-text {
+.search-form__label-text:hover {
   text-decoration: underline;
   text-decoration-color: #fff;
   text-decoration-thickness: 1px;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -242,7 +237,7 @@ ol {
 
 .content__card-link {
   display: block;
-  margin: 1px;
+  margin: 2px;
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
@@ -323,17 +318,23 @@ ol {
 
 .more-button {
   min-width: 390px;
+  background-color: transparent;
 }
 
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
-.search-form__submit-button:active {
+.button:active {
   background: rgb(84, 80, 80);
 }
 
-.search-form__submit-button:focus {
+.button:focus {
+  outline: none;
+  appearance: none;
+}
+
+.button:focus-visible {
   outline: 1px solid rgb(255, 255, 255);
   outline-offset: 2px;
 }
