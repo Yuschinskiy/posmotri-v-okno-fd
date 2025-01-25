@@ -77,6 +77,7 @@ ol {
 .result {
   grid-area: result;
   align-content: end;
+  margin-top: 78px;
 }
 
 .content__details {
